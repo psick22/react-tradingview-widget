@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react"
-import PropTypes from "prop-types"
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 
-const SCRIPT_ID = "tradingview-list-widget-script"
-const CONTAINER_ID = "tradingview-list-widget"
+const SCRIPT_ID = "tradingview-list-widget-script";
+const CONTAINER_ID = "tradingview-list-widget";
 
 export class TradingViewStockListWidget extends PureComponent {
   static propTypes = {
@@ -10,8 +10,8 @@ export class TradingViewStockListWidget extends PureComponent {
     height: PropTypes.string,
     symbolsGroups: PropTypes.array,
     locale: PropTypes.string,
-    largeChartUrl: PropTypes.string
-  }
+    largeChartUrl: PropTypes.string,
+  };
 
   static defaultProps = {
     width: "100%",
@@ -22,46 +22,36 @@ export class TradingViewStockListWidget extends PureComponent {
         symbols: [
           {
             name: "NASDAQ:AAPL",
-            displayName: "AAPL"
-          }
+            displayName: "AAPL",
+          },
         ],
-        name: "Stocks"
-      }
+        name: "Stocks",
+      },
     ],
     locale: "en",
-    largeChartUrl: "http://localhost/symbol/"
-  }
+    largeChartUrl: "http://localhost/symbol/",
+  };
 
-  containerId = `${CONTAINER_ID}-${Math.random()}`
+  containerId = `${CONTAINER_ID}-${Math.random()}`;
 
-  componentDidMount = () => setTimeout(this.appendScript, 100)
+  componentDidMount = () => setTimeout(this.appendScript, 100);
 
   appendScript = () => {
-    const script = document.createElement("script")
+    const script = document.createElement("script");
 
-    script.id = SCRIPT_ID
-    script.type = "text/javascript"
-    script.async = true
+    script.id = SCRIPT_ID;
+    script.type = "text/javascript";
+    script.async = true;
     script.src =
-      "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js"
-    script.onload = onload
+      "https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js";
+    script.onload = onload;
     script.innerHTML = JSON.stringify({
       ...TradingViewStockListWidget.defaultProps,
-      ...this.props
-    })
+      ...this.props,
+    });
 
-    document.getElementById(this.containerId).appendChild(script)
-  }
+    document.getElementById(this.containerId).appendChild(script);
+  };
 
-  getStyle = () => {
-    if (!this.props.autosize) return {}
-    return {
-      width: "100%",
-      height: "100%"
-    }
-  }
-
-  render = () => (
-    <article id={this.containerId} style={this.getStyle()}></article>
-  )
+  render = () => <article id={this.containerId}></article>;
 }

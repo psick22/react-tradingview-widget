@@ -61,7 +61,7 @@ export class TradingViewTechnicalAnalysis extends PureComponent {
       "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js";
     script.onload = onload;
     script.innerHTML = JSON.stringify({
-      ...TradingViewStockListWidget.defaultProps,
+      ...TradingViewTechnicalAnalysis.defaultProps,
       ...this.props,
     });
 
