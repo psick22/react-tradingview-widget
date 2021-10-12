@@ -8,7 +8,7 @@ const CONTAINER_ID = "tradingview-technical-analysis-widget";
 export class TradingViewTechnicalAnalysis extends PureComponent {
   static propTypes = {
     width: PropTypes.oneOf([PropTypes.number, "100%"]),
-    height: PropTypes.number,
+    height: PropTypes.oneOf([PropTypes.number, "100%"]),
     interval: PropTypes.oneOf([
       1,
       3,
