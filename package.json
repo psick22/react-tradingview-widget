@@ -1,6 +1,6 @@
 {
   "name": "react-tradingview-widget",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "React component for rendering the TradingView Widgets",
   "repository": {
     "type": "git",

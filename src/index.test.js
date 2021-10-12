@@ -1,5 +1,5 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from "react";
+import ReactDOM from "react-dom";
 import {
   TradingViewStockChartWidget,
   TradingViewIndicesWidget,
@@ -7,59 +7,67 @@ import {
   TradingViewStockInfoWidget,
   TradingViewStockProfileWidget,
   TradingViewStockListWidget,
+  TradingViewTechnicalAnalysis,
   BarStyles,
   IntervalTypes,
   RangeTypes,
-  Themes
-} from "./index"
+  Themes,
+} from "./index";
 
 describe("Types", () => {
   it("Exports Constants", () => {
-    expect(typeof BarStyles).toBe("object")
-    expect(typeof IntervalTypes).toBe("object")
-    expect(typeof RangeTypes).toBe("object")
-    expect(typeof Themes).toBe("object")
-  })
-})
+    expect(typeof BarStyles).toBe("object");
+    expect(typeof IntervalTypes).toBe("object");
+    expect(typeof RangeTypes).toBe("object");
+    expect(typeof Themes).toBe("object");
+  });
+});
 
 describe("<TradingViewStockChartWidget />", () => {
   it("Renders without crashing", () => {
-    const div = document.createElement("div")
-    ReactDOM.render(<TradingViewStockChartWidget symbol="NASDAQ:AAPL" />, div)
-  })
-})
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewStockChartWidget symbol="NASDAQ:AAPL" />, div);
+  });
+});
 
 describe("<TradingViewIndicesWidget />", () => {
   it("Renders without crashing", () => {
-    const div = document.createElement("div")
-    ReactDOM.render(<TradingViewIndicesWidget />, div)
-  })
-})
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewIndicesWidget />, div);
+  });
+});
 
 describe("<TradingViewStockChartMiniWidget />", () => {
   it("Renders without crashing", () => {
-    const div = document.createElement("div")
-    ReactDOM.render(<TradingViewStockChartMiniWidget />, div)
-  })
-})
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewStockChartMiniWidget />, div);
+  });
+});
 
 describe("<TradingViewStockInfoWidget />", () => {
   it("Renders without crashing", () => {
-    const div = document.createElement("div")
-    ReactDOM.render(<TradingViewStockInfoWidget />, div)
-  })
-})
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewStockInfoWidget />, div);
+  });
+});
 
 describe("<TradingViewStockProfileWidget />", () => {
   it("Renders without crashing", () => {
-    const div = document.createElement("div")
-    ReactDOM.render(<TradingViewStockProfileWidget />, div)
-  })
-})
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewStockProfileWidget />, div);
+  });
+});
 
 describe("<TradingViewStockListWidget />", () => {
   it("Renders without crashing", () => {
-    const div = document.createElement("div")
-    ReactDOM.render(<TradingViewStockListWidget />, div)
-  })
-})
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewStockListWidget />, div);
+  });
+});
+
+describe("<TradingViewTechnicalAnalysis />", () => {
+  it("Renders without crashing", () => {
+    const div = document.createElement("div");
+    ReactDOM.render(<TradingViewTechnicalAnalysis />, div);
+  });
+});
