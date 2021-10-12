@@ -20,6 +20,7 @@ return webpackJsonpreact_tradingview_widget([1],[
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return IntervalTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return RangeTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Themes; });
+/* unused harmony export DisplayModes */
 var BarStyles = {
   BARS: "0",
   CANDLES: "1",
@@ -48,6 +49,12 @@ var Themes = {
   DARK: "Dark"
 };
 
+var DisplayModes = {
+  REGULAR: "Regular",
+  COMPACT: "Compact",
+  ADAPTIVE: "Adaptive"
+};
+
 /***/ }),
 /* 4 */,
 /* 5 */,
@@ -70,11 +77,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TradingViewStockProfileWidget", function() { return __WEBPACK_IMPORTED_MODULE_4__stock_profile_widget__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__stock_list_widget__ = __webpack_require__(20);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TradingViewStockListWidget", function() { return __WEBPACK_IMPORTED_MODULE_5__stock_list_widget__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__types__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BarStyles", function() { return __WEBPACK_IMPORTED_MODULE_6__types__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IntervalTypes", function() { return __WEBPACK_IMPORTED_MODULE_6__types__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RangeTypes", function() { return __WEBPACK_IMPORTED_MODULE_6__types__["c"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Themes", function() { return __WEBPACK_IMPORTED_MODULE_6__types__["d"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__technical_analysis__ = __webpack_require__(21);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TradingViewTechnicalAnalysis", function() { return __WEBPACK_IMPORTED_MODULE_6__technical_analysis__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__types__ = __webpack_require__(3);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BarStyles", function() { return __WEBPACK_IMPORTED_MODULE_7__types__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IntervalTypes", function() { return __WEBPACK_IMPORTED_MODULE_7__types__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RangeTypes", function() { return __WEBPACK_IMPORTED_MODULE_7__types__["c"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Themes", function() { return __WEBPACK_IMPORTED_MODULE_7__types__["d"]; });
+
 
 
 
@@ -89,7 +99,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewIndicesWidget; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -136,14 +146,8 @@ var TradingViewIndicesWidget = function (_PureComponent) {
       script.innerHTML = JSON.stringify(_extends({}, TradingViewIndicesWidget.defaultProps, _this.props));
 
       document.getElementById(_this.containerId).appendChild(script);
-    }, _this.getStyle = function () {
-      if (!_this.props.autosize) return {};
-      return {
-        width: "100%",
-        height: "100%"
-      };
     }, _this.render = function () {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("article", { id: _this.containerId, style: _this.getStyle() });
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("article", { id: _this.containerId });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -241,7 +245,7 @@ TradingViewIndicesWidget.defaultProps = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewStockChartWidget; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -423,7 +427,7 @@ TradingViewStockChartWidget.defaultProps = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewStockChartMiniWidget; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -514,7 +518,7 @@ TradingViewStockChartMiniWidget.defaultProps = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewStockInfoWidget; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -596,7 +600,7 @@ TradingViewStockInfoWidget.defaultProps = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewStockProfileWidget; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -680,7 +684,7 @@ TradingViewStockProfileWidget.defaultProps = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewStockListWidget; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
@@ -725,14 +729,8 @@ var TradingViewStockListWidget = function (_PureComponent) {
       script.innerHTML = JSON.stringify(_extends({}, TradingViewStockListWidget.defaultProps, _this.props));
 
       document.getElementById(_this.containerId).appendChild(script);
-    }, _this.getStyle = function () {
-      if (!_this.props.autosize) return {};
-      return {
-        width: "100%",
-        height: "100%"
-      };
     }, _this.render = function () {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("article", { id: _this.containerId, style: _this.getStyle() });
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("article", { id: _this.containerId });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -758,6 +756,87 @@ TradingViewStockListWidget.defaultProps = {
   }],
   locale: "en",
   largeChartUrl: "http://localhost/symbol/"
+};
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TradingViewTechnicalAnalysis; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__types__ = __webpack_require__(3);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var SCRIPT_ID = "tradingview-technical-analysis-widget-script";
+var CONTAINER_ID = "tradingview-technical-analysis-widget";
+
+var TradingViewTechnicalAnalysis = function (_PureComponent) {
+  _inherits(TradingViewTechnicalAnalysis, _PureComponent);
+
+  function TradingViewTechnicalAnalysis() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, TradingViewTechnicalAnalysis);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = TradingViewTechnicalAnalysis.__proto__ || Object.getPrototypeOf(TradingViewTechnicalAnalysis)).call.apply(_ref, [this].concat(args))), _this), _this.containerId = CONTAINER_ID + "-" + Math.random(), _this.componentDidMount = function () {
+      return setTimeout(_this.appendScript, 100);
+    }, _this.appendScript = function () {
+      var script = document.createElement("script");
+
+      script.id = SCRIPT_ID;
+      script.type = "text/javascript";
+      script.async = true;
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js";
+      script.onload = onload;
+      script.innerHTML = JSON.stringify(_extends({}, TradingViewTechnicalAnalysis.defaultProps, _this.props));
+
+      document.getElementById(_this.containerId).appendChild(script);
+    }, _this.render = function () {
+      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("article", { id: _this.containerId });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  return TradingViewTechnicalAnalysis;
+}(__WEBPACK_IMPORTED_MODULE_1_react__["PureComponent"]);
+TradingViewTechnicalAnalysis.propTypes = {
+  width: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.number, __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.string]),
+  height: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.number, __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.string]),
+  interval: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.oneOf([1, 3, 5, 15, 30, 60, 120, 180, "1", "3", "5", "15", "30", "60", "120", "180", __WEBPACK_IMPORTED_MODULE_2__types__["b" /* IntervalTypes */].D, __WEBPACK_IMPORTED_MODULE_2__types__["b" /* IntervalTypes */].W]),
+  locale: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.string,
+  symbol: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.string.isRequired,
+  colorTheme: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.oneOf([__WEBPACK_IMPORTED_MODULE_2__types__["d" /* Themes */].LIGHT, __WEBPACK_IMPORTED_MODULE_2__types__["d" /* Themes */].DARK]),
+  isTransparent: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.bool,
+  showIntervalTabs: __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.bool
+};
+TradingViewTechnicalAnalysis.defaultProps = {
+  width: "100%",
+  height: "100%",
+  interval: 60,
+  locale: "en",
+  symbol: "BINANCE:BTCUSDT",
+  colorTheme: __WEBPACK_IMPORTED_MODULE_2__types__["d" /* Themes */].LIGHT,
+  isTransparent: true,
+  showIntervalTabs: true
 };
 
 /***/ })
