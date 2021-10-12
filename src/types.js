@@ -8,26 +8,26 @@ export const BarStyles = {
   RENKO: "4",
   LINE_BREAK: "7",
   KAGI: "5",
-  POINT_AND_FIGURE: "6"
-}
+  POINT_AND_FIGURE: "6",
+};
 
 export const IntervalTypes = {
   D: "D",
-  W: "W"
-}
+  W: "W",
+};
 
 export const RangeTypes = {
   YTD: "ytd",
-  ALL: "all"
-}
+  ALL: "all",
+};
 
 export const Themes = {
-  LIGHT: "Light",
-  DARK: "Dark"
-}
+  LIGHT: "light",
+  DARK: "dark",
+};
 
 export const DisplayModes = {
   REGULAR: "Regular",
   COMPACT: "Compact",
-  ADAPTIVE: "Adaptive"
-}
+  ADAPTIVE: "Adaptive",
+};

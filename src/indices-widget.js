@@ -34,7 +34,7 @@ export class TradingViewIndicesWidget extends PureComponent {
   };
 
   static defaultProps = {
-    colorTheme: "Light",
+    colorTheme: Themes.LIGHT,
     dateRange: "12m",
     showChart: true,
     locale: "en",
