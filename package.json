@@ -1,14 +1,14 @@
 {
   "name": "react-tradingview-widget",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "React component for rendering the TradingView Widgets",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WebMasterSam/react-tradingview-widget.git"
+    "url": "https://github.com/psick22/react-tradingview-widget.git"
   },
-  "author": "Samuel Rousseau",
+  "author": "Kirok Kwon",
   "bugs": {
-    "url": "https://github.com/WebMasterSam/react-tradingview-widget/issues"
+    "url": "https://github.com/psick22/react-tradingview-widget/issues"
   },
   "license": "MIT",
   "keywords": [
